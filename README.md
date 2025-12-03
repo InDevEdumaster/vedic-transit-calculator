@@ -2,7 +2,12 @@
 
 A precise, terminal-based Python tool for calculating Vedic Astrology planetary transits.
 
-This script utilizes the Swiss Ephemeris (via `pyswisseph`) to calculate exact planetary positions, sign ingresses, and changes in motion (Retrograde/Direct) with high astronomical accuracy.
+This script utilizes the Swiss Ephemeris (via `pyswisseph`) to calculate exact planetary positions, sign ingresses, and motion changes (Retrograde/Direct) with high astronomical accuracy.
+
+---
+
+
+<img src="screenshot.png" width="750">
 
 ---
 
@@ -14,9 +19,9 @@ This script utilizes the Swiss Ephemeris (via `pyswisseph`) to calculate exact p
   * Ayanamsa: True Chitra Paksha (Lahiri)
   * Nodes: Mean Nodes (Rahu/Ketu)
   * Positions: Geocentric, True positions
-* **Customizable Timeframe:** Defaults to ±1 year from the current date.
-* **Whole Sign Houses:** Calculates house positions based on the user-selected Ascendant (Lagna).
-* **Current Snapshot:** Displays a real-time snapshot of planetary positions at execution time.
+* **Customizable Timeframe:** Defaults to ±1 year from the current date
+* **Whole Sign Houses:** Calculates house positions based on the selected Ascendant (Lagna)
+* **Current Snapshot:** Displays real-time planetary positions at execution
 
 ---
 
@@ -29,14 +34,14 @@ This script utilizes the Swiss Ephemeris (via `pyswisseph`) to calculate exact p
 
 ## Installation
 
-### Clone the repository:
+### Clone the repository
 
 ```bash
 git clone https://github.com/yourusername/vedic-transit-calculator.git
 cd vedic-transit-calculator
 ```
 
-### Install Dependencies:
+### Install Dependencies
 
 ```bash
 pip install pyswisseph
@@ -44,14 +49,16 @@ pip install pyswisseph
 
 ### Setup Ephemeris Files
 
-This tool requires Swiss Ephemeris data files.
+This tool requires Swiss Ephemeris `.se1` files.
 
-1. Create a folder named **ephe** in the project root.
-2. Download `.se1` ephemeris files from the **Swiss Ephemeris Download Area**.
-3. You need at least the files covering your intended years (example: `sepl_18.se1` for 1800–2400 AD).
-4. Place the `.se1` files inside the **ephe** directory.
+1. Create a folder named **ephe** in the project root
+2. Download `.se1` ephemeris files from the Swiss Ephemeris download area
+3. At minimum, download files covering the years you will calculate (e.g., `sepl_18.se1` for 1800–2400 AD)
+4. Place all `.se1` files inside the **ephe** directory
 
-### Directory Structure
+---
+
+## Directory Structure
 
 ```
 vedic-transit-calculator/
@@ -60,6 +67,7 @@ vedic-transit-calculator/
 │   ├── semo_18.se1
 │   └── ...
 ├── vedic_transits.py
+├── screenshot.png
 ├── README.md
 └── .gitignore
 ```
@@ -77,12 +85,13 @@ python vedic_transits.py
 The script will:
 
 1. Initialize the Swiss Ephemeris
-2. Ask for your Ascendant (Lagna) sign number (e.g., `1` for Aries, `5` for Leo)
-3. Output detailed transit tables for all nine planets plus a real-time planetary snapshot
+2. Ask you to enter your Ascendant (Lagna) number (`1` = Aries, `5` = Leo, etc.)
+3. Generate detailed transit tables for all nine planets
+4. Display a current planetary snapshot
 
 ---
 
 ## License
 
 This project is licensed under the **GNU General Public License v3.0**.
-See the **LICENSE** file for more details.
+See the **LICENSE** file for details.
